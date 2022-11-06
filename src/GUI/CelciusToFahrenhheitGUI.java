@@ -31,15 +31,20 @@ public class CelciusToFahrenhheitGUI extends javax.swing.JFrame {
         celciusTextField = new javax.swing.JTextField();
         convertBtn = new javax.swing.JButton();
         celciusLbl = new javax.swing.JLabel();
-        fahrenheitLbl = new javax.swing.JLabel();
+        fahrenheitLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         convertBtn.setText("Convert");
+        convertBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertBtnActionPerformed(evt);
+            }
+        });
 
         celciusLbl.setText("Celcius");
 
-        fahrenheitLbl.setText("Fahrenheit");
+        fahrenheitLabel.setText("Fahrenheit");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -53,7 +58,7 @@ public class CelciusToFahrenhheitGUI extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(celciusLbl)
-                    .addComponent(fahrenheitLbl))
+                    .addComponent(fahrenheitLabel))
                 .addContainerGap(108, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -66,7 +71,7 @@ public class CelciusToFahrenhheitGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(convertBtn)
-                    .addComponent(fahrenheitLbl))
+                    .addComponent(fahrenheitLabel))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
 
@@ -83,6 +88,12 @@ public class CelciusToFahrenhheitGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void convertBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertBtnActionPerformed
+        // TODO add your handling code here:
+        double fahrenheit = Double.parseDouble(celciusTextField.getText()) * 1.8 + 32;
+        fahrenheitLabel.setText(fahrenheit + "Fahrenheit");
+    }//GEN-LAST:event_convertBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,7 +134,7 @@ public class CelciusToFahrenhheitGUI extends javax.swing.JFrame {
     private javax.swing.JLabel celciusLbl;
     private javax.swing.JTextField celciusTextField;
     private javax.swing.JButton convertBtn;
-    private javax.swing.JLabel fahrenheitLbl;
+    private javax.swing.JLabel fahrenheitLabel;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

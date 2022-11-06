@@ -47,7 +47,7 @@
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="celciusLbl" min="-2" max="-2" attributes="0"/>
-                      <Component id="fahrenheitLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="fahrenheitLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="108" max="32767" attributes="0"/>
               </Group>
@@ -64,7 +64,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="convertBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="fahrenheitLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="fahrenheitLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="57" max="32767" attributes="0"/>
               </Group>
@@ -78,13 +78,16 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Convert"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="convertBtnActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="celciusLbl">
           <Properties>
             <Property name="text" type="java.lang.String" value="Celcius"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="fahrenheitLbl">
+        <Component class="javax.swing.JLabel" name="fahrenheitLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fahrenheit"/>
           </Properties>
